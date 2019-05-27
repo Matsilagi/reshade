@@ -48,12 +48,6 @@ DXGISwapChain::DXGISwapChain(D3D12Device *device, IDXGISwapChain3 *original, con
 
 void DXGISwapChain::perform_present(UINT PresentFlags)
 {
-	// Some D3D11 games test presentation for timing and composition purposes.
-	// These calls are not rendering related, but rather a status request for the D3D runtime and as such should be ignored.
-	if (PresentFlags & DXGI_PRESENT_TEST)
-		return;
-
-	assert(_runtime != nullptr);
 
 	switch (_direct3d_version)
 	{
