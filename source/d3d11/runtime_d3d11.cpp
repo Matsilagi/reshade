@@ -1478,8 +1478,8 @@ void reshade::d3d11::runtime_d3d11::detect_depth_source(draw_call_tracker &track
 
 	if (_has_high_network_activity)
 	{
-		create_depthstencil_replacement(nullptr, nullptr);
-		return;
+		//create_depthstencil_replacement(nullptr, nullptr);
+		//return;
 	}
 
 	if (depth_buffer_before_clear)

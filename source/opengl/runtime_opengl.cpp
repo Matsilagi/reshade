@@ -1159,11 +1159,11 @@ void reshade::opengl::runtime_opengl::detect_depth_source()
 
 	if (_has_high_network_activity)
 	{
-		_depth_source = 0;
-		glDeleteTextures(1, &_tex[TEX_DEPTH]);
-		_tex[TEX_DEPTH] = 0;
-		update_texture_references(texture_reference::depth_buffer);
-		return;
+		//_depth_source = 0;
+		//glDeleteTextures(1, &_tex[TEX_DEPTH]);
+		//_tex[TEX_DEPTH] = 0;
+		//update_texture_references(texture_reference::depth_buffer);
+		//return;
 	}
 
 	assert(_app_state.has_state);
